@@ -1,0 +1,311 @@
+.pane{
+  background-color: black;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+  background-color: black;
+  display: flex;   /* to enable flexbox layout */
+  flex-direction: column;   /* to make its children stack vertically.*/
+  flex-grow: 1;  /* to allow the flex item to grow and fill the available space within its flex container.*/
+}
+
+.text {
+  opacity: 0.5; /* Initial opacity for fading effect */
+  transition: opacity 0.3s ease; /* Transition for fading effect */
+  margin-left: 9px;
+  font-size: small;
+  font-weight: 700;
+}
+
+/* //heading for every playlist header name */
+.Heading{
+ text-decoration: none;
+    color: white;
+
+}
+.Heading:hover{
+  text-decoration: underline;
+}
+
+/* show all for all the playlist */
+.Showall{
+  opacity: 0.5; /* Initial opacity for fading effect */
+  transition: opacity 0.3s ease; /* Transition for fading effect */
+  margin-left: 9px;
+  font-size: small;
+  font-weight: 700;
+
+}
+.Showall:hover{
+  text-decoration: underline;
+}
+
+.icon{
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+.list:hover .text {
+opacity: 1; /* Full opacity on hover */
+}
+.list:hover .icon {
+opacity: 1;  /* Full opacity on hover */
+}
+.icon:hover{
+opacity: 1;
+}
+
+.button:hover{
+transform: scale(1.05);/* Increase size by 5% on hover*/
+/*transform: scale(1.1);  Increase size by 10% on hover*/
+}
+.yourlibrary{
+height: 13rem;
+overflow-y: scroll;
+}
+.yourlibrary::-webkit-scrollbar{
+width: 12px;
+}
+.yourlibrary::-webkit-scrollbar-thumb:hover{
+background-color: rgba(104, 104, 104, 0.693); 
+}
+
+/* .Bottom{
+display: -ms-flexbox;
+  display: flex;
+  min-width: 620px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+
+} */
+
+/* toast */
+.hoverd{
+  opacity: 0.5; /* Initial opacity for fading effect */
+  transition: opacity 0.3s ease; /* Transition for fading effect */
+  font-size: 1.7vh;
+}
+.hoverd:hover{
+  opacity: 1;
+  /* color: white; */
+}
+.toastcard{
+  /* Existing styles... */
+  position: relative; /* Make the toast element relative for positioning */
+}
+
+.toastcard::before {
+  content: ""; /* Add an empty content to avoid affecting text layout */
+  position: absolute;
+  top: 50%; /* Position the arrow vertically centered */
+  left: -10px;  /* Position the arrow 10px outside the left edge */
+  transform: translateY(-50%); /* Center the arrow vertically within the content area */
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent; /* Left border for the arrow shape */
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #0080ff; /* Bottom border with toast background color for arrow */
+}
+.poptoast{
+  position: relative;  
+}
+
+
+.bg{
+background-color:#121212;   
+}
+.p{
+  font-size: 13px ;
+  /* font-weight: 400; */
+
+  font-weight: bold;
+  color: rgb(176, 176, 176);
+  display: -webkit-box;
+-webkit-line-clamp: 2; /* Limit the number of lines to display */
+-webkit-box-orient: vertical;
+overflow: hidden;
+/* text-overflow: ellipsis */ 
+}
+
+.headingname{
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* Limit the number of lines to display */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  /* text-overflow: ellipsis */ 
+
+}
+.scrollStart {
+  overflow-y: auto; /* Changed to auto for vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  height: 78vh;
+}
+
+.scrollStart::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+  height: 12px; /* Height of the scrollbar */
+}
+
+.scrollStart::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(104, 104, 104, 0.693); /* Background color of the scrollbar thumb */
+}
+
+.scroll{
+overflow-y: scroll;
+height: 65vh
+}
+.scroll::-webkit-scrollbar{
+width: 12px;
+}
+.scroll::-webkit-scrollbar-thumb:hover{
+background-color: rgba(104, 104, 104, 0.693); 
+}
+
+
+.scrollInstallApp {
+  overflow-y: auto; /* Changed to auto for vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  height: 72vh;
+}
+
+.scrollInstallApp::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+  height: 12px; /* Height of the scrollbar */
+}
+
+.scrollInstallApp::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(104, 104, 104, 0.693); /* Background color of the scrollbar thumb */
+}
+
+
+
+.bottom{
+position: fixed;
+bottom: 0;
+height: 4rem;
+background: linear-gradient(90deg,#af2896,#509bf5);
+width: 99%;
+margin-left: 8px;
+margin-bottom: 8px;
+}
+
+
+.play {
+  position: absolute;
+  top: 110px; /* Adjust as needed to position the play button */
+  right: 10px; /* Adjust as needed to position the play button */
+  width: 40px;
+  height: 40px;
+  background-color:  #1ED760;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1; /* Initially hide the play button */
+}
+.card:hover .play {
+  opacity: 1; /* Show the play button on hover */
+}
+.LoginDiv{
+  /* min-height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+}
+.loginform{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bgls{
+  /* background: linear-gradient(rgba(22, 22, 22, 0.818) 0%, rgb(0, 0, 0) 100%); */
+  background-color: black;
+  min-height: 100vh;
+}
+.textinputdiv{
+display: flex;
+flex-direction: column;
+border-color: rgb(104, 105, 104);
+
+}
+.inputContainer{
+  display: flex;
+  align-items: center;
+  width: 25rem;
+}
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.textinputdiv .input:hover{
+  /* background-color: white; */
+  border-color: #fefefe;
+  border-style: solid;
+}
+.inputcontainer{
+  font-size: 1rem;
+  font-weight: 400;
+  background: black;
+  border-style: solid;
+  color: white;
+  border-color: #5b5c5b;
+  border-radius: 5px;
+  width: 25rem;
+  border: 0.5;
+}
+.inputcontainer input {
+  border: none;
+  background-color: transparent;
+  margin-left: 5px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 400;
+  outline:none;
+  width: 23rem;
+  margin-top: 5px;
+}
+.inputiconbutton{
+  position: absolute;
+  right: 165px;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  background-color: black;
+}
+.inputiconbutton:focus , .inputicon:focus, .inputiconbutton:hover , .inputicon:hover {
+  outline: none;
+  border: none;
+  background-color: black;
+}
+.inputcontainer:hover{
+  /* background-color: white; */
+  border-color: #fefefe;
+  border-style: solid;
+}
+.signupcontainer{
+  display: flex;
+  margin-top: 20px;
+  width: 25rem;
+  color: white;
+}
+
+/* toast */
+
+.hoverd{
+  opacity: 0.5; /* Initial opacity for fading effect */
+  transition: opacity 0.3s ease; /* Transition for fading effect */
+  font-size: 1.7vh;
+}
+.hoverd:hover{
+  opacity: 1;
+  /* color: white; */
+}
+
